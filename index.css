@@ -1,0 +1,204 @@
+body {
+	background-color: darkslategrey;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	height: 100vh;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	color: darkslategrey;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 20px;
+	display:flex;
+	padding: 20px;
+	height: 470px;
+}
+
+.card.submitted {
+	display: none;
+}
+
+#mobile {
+	display: none;
+}
+
+.list-group {
+	display: flex;
+	flex-direction: column;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.img-cont {
+	height: 100%;
+}
+
+.img-cont img {
+	height: 100%;
+}
+
+.card-row-1 h1 {
+	font-size: 32pt;
+}
+
+.card-row-1 {
+	padding: 0 25px 0 25px;
+	width: 350px;
+}
+
+.list-item-cont {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.icon {
+	margin-right: 10px;
+}
+
+label {
+	font-weight: bold;
+
+}
+
+.input-controls {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-control {
+	margin-bottom: 10px;
+	padding: 13px;
+	border: 1px solid darkslategrey;
+	border-radius: 5px;
+
+}
+
+.input-controls button {
+	background-color: darkslategrey;
+	font-size: 16px;
+	color: white;
+	border: none !important;
+
+}
+
+.input-controls button:hover {
+	background: linear-gradient(to right, tomato, rgba(255, 127, 127, 0.6));
+	box-shadow: 0 4px 6px rgba(255, 127, 127, 0.2), 0 8px 10px rgba(255, 127, 127, 0.15);
+}
+
+.input-controls button:active {
+	background: linear-gradient(to right, tomato, rgba(255, 127, 127, 0.6));
+	box-shadow: 0 4px 6px rgba(255, 127, 127, 0.2), 0 8px 10px rgba(255, 127, 127, 0.15);
+}
+
+/*error state*/
+
+.email-input.error {
+	background-color: rgba(255,0,0, 0.1);
+	border: 1px solid rgba(255,0,0, 0.4);
+	color: red;
+}
+
+#error-state {
+	visibility: hidden;
+	color: red;
+}
+
+.label-and-error-cont {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0 10px 0;
+
+}
+
+/*thank you card*/
+
+.thanks-you-card {
+	width: 300px;
+	background-color: white;
+	padding: 40px;
+	border-radius: 20px;
+	display:none;
+
+}
+
+.thanks-you-card.success {
+	display: block;
+}
+.thanks-you-card h1 {
+	font-size: 32pt;
+}
+.success-icon {
+	height: 60px;
+}
+
+#thank-success-icon {
+	height: 100%;
+}
+
+#dismis-button {
+	padding: 12px;
+	border-radius: 5px;
+	background-color: darkslategrey;
+	color: white;
+	font-size: 16px;
+	border: none;
+}
+
+#dismis-button:hover {
+	background: linear-gradient(to right, tomato, rgba(255, 127, 127, 0.6));
+	box-shadow: 0 4px 6px rgba(255, 127, 127, 0.2), 0 8px 10px rgba(255, 127, 127, 0.15);
+}
+
+#dismis-button:active {
+	background: linear-gradient(to right, tomato, rgba(255, 127, 127, 0.6));
+	box-shadow: 0 4px 6px rgba(255, 127, 127, 0.2), 0 8px 10px rgba(255, 127, 127, 0.15);
+}
+
+
+/*mobile friendly design*/
+
+
+@media screen and (max-width: 768px) {
+
+	body {
+		background-color: #fff;
+	}
+	.card {
+		background-color: #fff;
+		border-radius: 0;
+		display:flex;
+		flex-direction: column-reverse;
+		height: 100vh;
+		align-items: center;
+		padding: 10px; 
+	}	
+
+	.img-cont img {
+		width: 100%;
+		height: auto; 
+		object-fit: contain; 
+	}
+	#desktop {
+		 display: none;
+	}
+
+	#mobile {
+		display: block;
+	}
+	.card-row-1 {
+		padding: 0 10px 0 10px;
+		width: 100%; 
+	}
+
+	.input-controls button {
+		width: 100%;
+	}
+}
